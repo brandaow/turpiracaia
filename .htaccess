@@ -1,0 +1,15 @@
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW PWPROTECTID:WmZIfmWkF7
+#AuthType Basic
+#AuthName "Restricted Access"
+#AuthUserFile /home/u922847538/domains/pmmu.com.br/public_html/piracaia/a/.htpasswd
+#Require valid-user
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE WmZIfmWkF7:PWPROTECTID
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:turpiracaia.com.br
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} (www\.)?turpiracaia.com.br
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:turpiracaia.com.br
